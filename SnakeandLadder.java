@@ -23,16 +23,23 @@ public class SnakeandLadder {
 					break;
 				case 1:
 					start_position_firstplayer = start_position_firstplayer + dice;
+					if(start_position_firstplayer>100)
+					{
+						System.out.println("exact");
+						start_position_firstplayer = start_position_firstplayer - dice ;
+					}
+					System.out.println(start_position_firstplayer);
 					break;
 				case 2:
 					start_position_firstplayer = start_position_firstplayer - dice;
+					if(start_position_firstplayer < 0)
+					{
+						start_position_firstplayer = 0;
+					}
 					System.out.println(start_position_firstplayer);
 					break;
 			}
-			if(start_position_firstplayer < 0)
-			{
-				start_position_firstplayer = 0;
-			}
+			
 		
 		}
 	}
